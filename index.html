@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>古画演示平台</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="古画演示">
+    <script src="./js/jquery.min.js"></script>
+    <script src='./openseadragon/openseadragon.min.js'></script>
+</head>
+
+<body style="background-color: #fefefe;overflow: hidden;">
+    <div id="openseadragonWrapper" style="width: 100vw; height: 100vh;"></div>
+    <script type="text/javascript">
+        var viewer = OpenSeadragon({
+            id: "openseadragonWrapper",
+            prefixUrl: "/openseadragon/images/",
+            navigatorSizeRatio: 0.25,
+            wrapHorizontal: false,
+            tileSources: {
+                height: 3130,
+                width: 79575,
+                tileSize: 512,
+                minLevel: 12,
+                maxLevel: 18,
+                Size: {//图片总大小
+                    Height: '3130',
+                    Width: '79575',
+                },
+                getTileUrl: function (level, x, y) {
+                    return "/book/" +
+                        (level) + "/" + x + "_" + y + ".jpg";
+                }
+            },
+            constrainDuringPan: true,
+            showNavigator: true, // 展示导航图
+
+        });
+    </script>
+
+</body>
+
+</html>
