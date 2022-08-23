@@ -12,5 +12,5 @@
 
 #### 效果图
 
-![全展示效果](./preview/01.jpg)
-![细节展示效果](./preview/02.jpg)
+![全展示效果](/preview/01.jpg)
+![细节展示效果](/preview/02.jpg)
